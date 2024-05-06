@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+
+<body>
+      <%= message %>
+            <form action="" method="post">
+                  <table>
+                        <tr>
+                              <td>Select Std</td>
+                              <td>
+                                    <select name="std" id="" required>
+                                          <option value="" selected disabled>--Select Std--</option>
+                                          <%result1.forEach(function(data){%>
+                                                <option value="<%= data %>">
+                                                      <%= data %>
+                                                </option>
+                                                <%})%>
+                                    </select>
+                              </td>
+                        </tr>
+                        <tr>
+                              <td>Enter div</td>
+                              <td><input type="text" name="div" required></td>
+                        </tr>
+                        <tr>
+                              <td></td>
+                              <td><input type="submit" name="Add Data"></td>
+                        </tr>
+                  </table>
+            </form>
+</body>
+
+</html>

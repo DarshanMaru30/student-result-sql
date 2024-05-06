@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <script>
+            async function getdiv(val) {
+                  let data = await fetch(`/getdivision/${val}`);
+                  data = await data.json();
+                  var div = document.getElementById('div');
+                  let child = div.lastElementChild;
+                  while (child) {
+                        div.removeChild(child);
+                        child = div.lastElementChild;
+                  }
+                  var temp = document.createElement("option");
+                  temp.setAttribute('selected', true);
+                  temp.setAttribute('disabled', true);
+                  temp.innerHTML = '--Select Division--';
+                  div.append(temp)
+                  for (let i = 0; i < data.length; i++) {
+                        var temp = document.createElement("option");
+                        temp.setAttribute('value', data[i]);
+                        temp.innerHTML = data[i];
+                        div.append(temp)
+                  }
+                  console.log(data);
+            }
+      </script>
+</head>
+
+<body>
+      <%= message %>
+            <form action="" method="post">
+                  <table>
+                        <tr>
+                              <td>Name</td>
+                              <td><input type="text" name="name" required></td>
+                        </tr>
+                        <tr>
+                              <td>Select Std</td>
+                              <td>
+                                    <select name="std" id="" required onchange="getdiv(this.value)">
+                                          <option value="" selected disabled>--Select Std--</option>
+                                          <%result1.forEach(function(data){%>
+                                                <option value="<%= data %>">
+                                                      <%= data %>
+                                                </option>
+                                                <%})%>
+                                    </select>
+                              </td>
+                        </tr>
+                        <tr>
+                              <td>Enter div</td>
+                              <td>
+                                    <select name="div" id="div" required>
+                                          <option value="" selected disabled>--Select Division--</option>
+                                    </select>
+                              </td>
+                        </tr>
+                        <tr>
+                              <td>Enter RollNo.</td>
+                              <td><input type="text" name="roll" required></td>
+                        </tr>
+                        <tr>
+                              <td></td>
+                              <td><input type="submit" name="Add Data"></td>
+                        </tr>
+                  </table>
+            </form>
+</body>
+
+</html>

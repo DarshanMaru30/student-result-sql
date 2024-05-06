@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+
+<body>
+      <%= meaasge %>
+            <form action="" method="post">
+                  <table>
+                        <tr>
+                              <td>Choss Roll No.</td>
+                              <td>
+                                    <select name="roll" id="" required>
+                                          <option value="" selected disabled>--select Roll No.--</option>
+                                          <%result.forEach(function(data){%>
+                                                <option value="<%= data.rollno%>">
+                                                      <%= data.rollno%>
+                                                </option>
+                                                <%})%>
+                                    </select>
+                              </td>
+                        </tr>
+                        <tr>
+                              <td>Subject 1 Marks</td>
+                              <td><input type="number" name="s1" id="" min="0" max="100" required></td>
+                        </tr>
+                        <tr>
+                              <td>Subject 2 Marks</td>
+                              <td><input type="number" name="s2" id="" min="0" max="100" required></td>
+                        </tr>
+                        <tr>
+                              <td>Subject 3 Marks</td>
+                              <td><input type="number" name="s3" id="" min="0" max="100" required></td>
+                        </tr>
+                        <tr>
+                              <td>Subject 4 Marks</td>
+                              <td><input type="number" name="s4" id="" min="0" max="100" required></td>
+                        </tr>
+                        <tr>
+                              <td>Subject 5 Marks</td>
+                              <td><input type="number" name="s5" id="" min="0" max="100" required></td>
+                        </tr>
+                        <tr>
+                              <td>Subject 6 Marks</td>
+                              <td><input type="number" name="s6" id="" min="0" max="100" required></td>
+                        </tr>
+                        <tr>
+                              <td>Subject 7 Marks</td>
+                              <td><input type="number" name="s7" id="" min="0" max="100" required></td>
+                        </tr>
+                        <tr>
+                              <td></td>
+                              <td><input type="submit" value="Save"></td>
+                        </tr>
+                  </table>
+            </form>
+</body>
+
+</html>

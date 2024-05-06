@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+
+<body>
+      <table border="">
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Std</th>
+            <th>Division</th>
+            <th>Edit</th>
+            <%result.forEach(function(data){%>
+                  <tr>
+                        <td>
+                              <%= data.id%>
+                        </td>
+                        <td>
+                              <%= data.name%>
+                        </td>
+                        <td>
+                              <%= data.email%>
+                        </td>
+                        <td>
+                              <%= data.password%>
+                        </td>
+                        <td>
+                              <%= data.class%>
+                        </td>
+                        <td>
+                              <%= data.division%>
+                        </td>
+                        <td>
+                              <a href="/admin/admindashboard/viewstaff/<%= data.id%>">Edit</a>
+                        </td>
+                  </tr>
+                  <%})%>
+      </table>
+</body>
+
+</html>

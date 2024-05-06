@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            table {
+                  display: table;
+                  border-collapse: separate;
+                  border-color: gray;
+            }
+      </style>
+</head>
+
+<body>
+      <table border="2" align="center">
+            <%result.forEach(function(data){%>
+                  <tr>
+                        <td>Name</td>
+                        <td>Std</td>
+                        <td>Division</td>
+                        <td>RollNo.</td>
+                        <td>Subject S1 Marks</td>
+                        <td>Subject S2 Marks</td>
+                        <td>Subject S3 Marks</td>
+                        <td>Subject S4 Marks</td>
+                        <td>Subject S5 Marks</td>
+                        <td>Subject S6 Marks</td>
+                        <td>Subject S7 Marks</td>
+                        <td>Total</td>
+                        <td>Minimum Makes</td>
+                        <td>Maximum Makes</td>
+                        <td>Result</td>
+                  </tr>
+                  <tr>
+                        <td>
+                              <%= data.name %>
+                        </td>
+                        <td>
+                              <%= data.std %>
+                        </td>
+                        <td>
+                              <%= data.division %>
+                        </td>
+                        <td>
+                              <%= data.rollno %>
+                        </td>
+                        <td>
+                              <%= data.s1 %>
+                        </td>
+                        <td>
+                              <%= data.s2 %>
+                        </td>
+                        <td>
+                              <%= data.s3 %>
+                        </td>
+                        <td>
+                              <%= data.s4 %>
+                        </td>
+                        <td>
+                              <%= data.s5 %>
+                        </td>
+                        <td>
+                              <%= data.s6 %>
+                        </td>
+                        <td>
+                              <%= data.s7 %>
+                        </td>
+                        <td>
+                              <%= data.total %>
+                        </td>
+                        <td>
+                              <%= data.minimum %>
+                        </td>
+                        <td>
+                              <%= data.maximum %>
+                        </td>
+                        <td>
+                              <%= data.resu %>
+                        </td>
+                  </tr>
+                  <%})%>
+      </table>
+      <a href="/student/logout">Logout</a>
+</body>
+
+</html>

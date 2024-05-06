@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+
+<body>
+      <form action="" method="post">
+            <table>
+                  <%result.forEach(function(data){%>
+                        <tr>
+                              <td>Name: </td>
+                              <td><input type="text" value="<%= data.name%>" name="name"></td>
+                        </tr>
+                        <tr>
+                              <td>std: </td>
+                              <td><input type="text" value="<%= data.std%>" name="std"></td>
+                        </tr>
+                        <tr>
+                              <td>division: </td>
+                              <td><input type="text" value="<%= data.division%>" name="div"></td>
+                        </tr>
+                        <tr>
+                              <td>Roll No.: </td>
+                              <td><input type="text" value="<%= data.rollno%>" name="roll"></td>
+                        </tr>
+                        <tr>
+                              <td>s1: </td>
+                              <td><input type="text" value="<%= data.s1%>" name="s1"></td>
+                        </tr>
+                        <tr>
+                              <td>s2: </td>
+                              <td><input type="text" value="<%= data.s2%>" name="s2"></td>
+                        </tr>
+                        <tr>
+                              <td>s3: </td>
+                              <td><input type="text" value="<%= data.s3%>" name="s3"></td>
+                        </tr>
+                        <tr>
+                              <td>s4: </td>
+                              <td><input type="text" value="<%= data.s4%>" name="s4"></td>
+                        </tr>
+                        <tr>
+                              <td>s5: </td>
+                              <td><input type="text" value="<%= data.s5%>" name="s5"></td>
+                        </tr>
+                        <tr>
+                              <td>s6: </td>
+                              <td><input type="text" value="<%= data.s6%>" name="s6"></td>
+                        </tr>
+                        <tr>
+                              <td>s7: </td>
+                              <td><input type="text" value="<%= data.s7%>" name="s7"></td>
+                        </tr>
+                        <tr>
+                              <td> </td>
+                              <td><input type="submit" value="Save Changes"></td>
+                        </tr>
+                        <%})%>
+            </table>
+      </form>
+</body>
+
+</html>
